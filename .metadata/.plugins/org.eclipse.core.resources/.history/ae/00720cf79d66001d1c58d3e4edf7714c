@@ -1,0 +1,20 @@
+class Conejo extends Thread{
+	public Conejo (String name) {
+		super(name);// El método de construcción de la clase padre, establece el nombre
+	}
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName()+" Comenzo la carrera ");
+		for(int i = 1;i<=10; i ++){ // i representa metros
+			// Conejo 10 metros, 1 metro por segundo es 0.1 segundo
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			// Imprime cada vez que corras un metro
+			System.out.println(Thread.currentThread().getName()+" Corrió "+i+" Metro de la carrera ");	
+		}
+		System.out.println(Thread.currentThread().getName()+" Finaliza la carrera ");
+	}
+}

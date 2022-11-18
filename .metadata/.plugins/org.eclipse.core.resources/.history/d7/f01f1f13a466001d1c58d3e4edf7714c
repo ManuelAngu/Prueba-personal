@@ -1,0 +1,21 @@
+class Tortuga extends Thread{
+	public Tortuga(String name) {
+		super(name);// El método de construcción de la clase padre, establece el nombre
+	}
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName()+" Comenzo la carrera ");
+		for(int i = 1;i <= 10; i ++){ // i representa metros
+			
+			try {
+				Thread.sleep(5000);// el metodo sleep el que he usado para calcular el tiempo que tarda en andar cada metro
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			// Imprime cada vez que corras un metro
+			System.out.println(Thread.currentThread().getName()+" Corrió "+i+" Metros de la carrera ");
+					
+		}
+		System.out.println(Thread.currentThread().getName()+" Finaliza la carrera ");
+	}
+}

@@ -1,0 +1,10 @@
+public class Test_Tortuga_y_Conejo{
+	public static void main(String[] args) {
+		// Creando los hilos de tortuga y conejo
+		Tortuga tortuga = new Tortuga("Tortuga");
+		Conejo conejo = new Conejo("Liebre");
+		// Comienzan a procesar los hilos la carrera
+		tortuga.start();
+		conejo.start();
+	}
+}

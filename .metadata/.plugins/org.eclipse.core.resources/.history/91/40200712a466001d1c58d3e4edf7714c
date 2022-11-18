@@ -1,0 +1,12 @@
+public class Test_Tortuga_y_Conejo{
+	public static void main(String[] args) throws InterruptedException {
+		// Creando los hilos de tortuga y conejo
+		Tortuga tortuga = new Tortuga("Tortuga");
+		Conejo conejo = new Conejo("Conejo");
+		// Comienzan a procesar los hilos la carrera
+		tortuga.start();
+		tortuga.join();
+		conejo.start();
+		conejo.join();
+	}
+}

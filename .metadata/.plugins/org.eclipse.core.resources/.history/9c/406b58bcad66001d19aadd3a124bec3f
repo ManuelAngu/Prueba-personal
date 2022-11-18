@@ -1,0 +1,12 @@
+public class Test_Tortuga_y_Conejo{
+	public static void main(String[] args) throws InterruptedException {//aqui metemos throws InterruptedException para que no nos de error el join
+		// Creando los hilos de tortuga y conejo
+		Tortuga tortuga = new Tortuga("Tortuga");
+		Conejo conejo = new Conejo("Conejo");
+		// Comienzan a procesar los hilos la carrera
+		tortuga.start();
+		//tortuga.join();
+		conejo.start();	// Join Bloquea el subproceso de llamada hasta que finaliza el subproceso representado por esta instancia.
+		//conejo.join();
+	}
+}

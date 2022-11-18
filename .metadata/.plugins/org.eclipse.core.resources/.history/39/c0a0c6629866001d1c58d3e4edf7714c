@@ -1,0 +1,10 @@
+public class TestTurAndRabbit{
+	public static void main(String[] args) {
+		// Creando los hilos de tortuga y conejo
+		Tur tur = new Tur("Tortuga");
+		Rabbit rabbit = new Rabbit("Liebre");
+		// Comienzan a procesar los hilos la carrera
+		tur.start();
+		rabbit.start();
+	}
+}

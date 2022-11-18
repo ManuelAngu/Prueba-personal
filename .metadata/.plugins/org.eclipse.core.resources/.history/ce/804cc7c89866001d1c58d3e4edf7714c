@@ -1,0 +1,10 @@
+public class TestToryLieb{
+	public static void main(String[] args) {
+		// Creando los hilos de tortuga y conejo
+		Tor tor = new Tor("Tortuga");
+		Lieb lieb = new Lieb("Liebre");
+		// Comienzan a procesar los hilos la carrera
+		tor.start();
+		lieb.start();
+	}
+}

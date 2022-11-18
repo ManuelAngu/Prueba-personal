@@ -1,0 +1,27 @@
+class Conejo extends Thread{
+	public Conejo (String name) {
+		super(name);// El método de construcción de la clase padre, establece el nombre
+	}
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName()+" Comenzo la carrera ");
+		for(int i = 1;i<=10; i ++){ // i representa metros
+			
+			try {
+				Thread.sleep(1000);//Suspende el subproceso actual durante el número de milisegundos especificado.
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			if(i==1) {
+				System.out.println(Thread.currentThread().getName()+" Corrió "+i+ " Metro de la carrera  ");//metemos un if para que cuando sea 1, diga metro en singular
+				
+			}else {
+				System.out.println(Thread.currentThread().getName()+" Corrió "+i+" Metros de la carrera ");// y else para metros porque sera el resto de numeros que se dice en plural
+			}
+			
+			
+				
+		}
+			System.out.println(Thread.currentThread().getName()+" Finaliza la carrera ");
+	}
+}
